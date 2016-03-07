@@ -1,0 +1,35 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #58666e;
+}
+
+.container-inner{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.var-give-name {
+    margin-bottom: 30px;
+}
+
+.var-give-name h3.title {
+    padding: 10px;
+    color: #29afec;
+    border-bottom: 2px solid #29afec;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.var-give-name .give-names {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.give-name {
+    border-bottom: 1px dashed #e3ecec;
+    padding-left: 5px;
+    position: relative;
+}

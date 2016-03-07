@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>first example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/avalon.js"></script>
+    <script>
+        
+        require(["mmRequest/mmRequest"], function() {
+            var vm = avalon.define({
+                $id: "search",
+                name: "mysql",
+                results: ["amount", "balance", "get_amount_balance"],
+                submit: function(){
+                    avalon.getJSON('json', {'varName': name}, function(){
+                        console.log("success");
+                    })
+                }
+            });
+            
+            avalon.scan();
+        });
+        
+    </script>
+</head>
+ 
+<body ms-controller="search">
+    
+    <input  ms-duplex="name" placeholder="请输入中文语义">
+    <button ms-click="submit" class="pure-button pure-button-primary">搜索</button>
+    <div class="container">
+        <div class="container-inner">
+            <div class="var-give-name">
+                <h3 class="title">
+                    <i class=""></i>
+                    <span>搜索结果</span>
+                </h3>
+                <div class="give-names">
+                    <div class="give-name pure-g" ms-repeat-el="results">
+                        <div class="pure-u-1-2"><p>{{ el }}</p></div>
+                        <div class="pure-u-1-2"><p>{{ el }}</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
